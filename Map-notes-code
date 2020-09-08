@@ -1,0 +1,53 @@
+// 1. This is the java notes for collection Framework. It consists of HashMap and its functions.
+// Date: Sept 8, 2020
+import java.util.*;
+public class Main
+{
+    public static void main(String...arg){
+        HashMap<String,String> hm = new HashMap<>();
+        //For inserting the record put(Object k, Object v)
+        //It will replace if found any key duplicate key and return the previous value
+        //If key is inserted first time, it will return the null
+        
+        System.out.println(hm.put("1","String-1")); // return null, since key ="1" is inserted first time 
+        System.out.println(hm.put("1","String-3")); // return "String-3", as key has been inserted already
+        //it means put() replaces the value.
+
+        hm.put("2","String-2");
+        hm.put("3","String-3");
+        hm.put("4","String-4");
+        hm.put("5","String-5");
+        
+        //putIfAbsent() just return previous value if key found.
+        //It will not insert the updated value
+        System.out.println(hm.putIfAbsent("4","String-43"));//Since 4 is alread present in this hashmap, it will no insert "String-43"
+        
+        //remove() , it has 2 varient available 
+        System.out.println(hm.remove("3", "String-3")); // For removing specific key with specified value
+        System.out.println(hm.remove("4")); // For removing specific key with specified value
+        
+        // Now if we want to find if any value or key is present in the Map or not then we have following two methods
+        // containsKey(E key) & containsValue(V value). They returns boolean value
+        
+        System.out.println(hm.containsKey("1"));
+        System.out.println(hm.containsValue("String-2"));
+        
+        //Get the set of all the keys 
+        //keySet(), it returns set of keys 
+        
+        Set<String> ks = hm.keySet();
+        System.out.println(ks);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // System.out.println(hm); // Printing 
+        // System.out.println(hm.toString()); // Printing 
+     
+    }
+}
