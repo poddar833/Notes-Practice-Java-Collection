@@ -34,18 +34,18 @@ public class Main
         
         //Get the set of all the keys 
         //keySet(), it returns set of keys 
-        
         Set<String> ks = hm.keySet();
         System.out.println(ks);
         
+        //Get the Collection of all the values 
+        //values(), it returns Collection of values 
+        Collection c = hm.values();
+        for(Object o: c){
+            String s = (String)o;
+            System.out.print(s + " ");
+        }
         
-        
-        
-        
-        
-        
-        
-        
+
         // System.out.println(hm); // Printing 
         // System.out.println(hm.toString()); // Printing 
      
